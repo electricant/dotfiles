@@ -1,0 +1,11 @@
+;;; First of all load quicklisp and check for updates
+(load "~/.quicklisp/setup.lisp")
+(write-line "Updating quicklisp...")
+(ql:update-client)
+(write-line "Updating packages...")
+(ql:update-dist "quicklisp")
+;;; Run this from time to time to clean all distributions and start from scratch
+; (map nil 'ql-dist:clean (ql-dist:all-dists))
+;;; Load required packages for the interactive shell
+(ql:quickload "linedit")
+(funcall (intern "INSTALL-REPL" :linedit) :wrap-current t)

@@ -1,0 +1,17 @@
+[color]
+	ui = auto
+[user]
+	name = Electric Ant
+	email = electricant@anche.no
+[merge]
+	ff = true
+[push]
+	default = simple
+[commit]
+	template = /home/pol/.git_commitmsg
+[credential]
+	helper = cache --timeout=3600
+[diff]
+	tool = vimdiff
+[pull]
+	rebase = false
