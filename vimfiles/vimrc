@@ -44,11 +44,13 @@ set hlsearch " Hilight search results
 " Turn magic on for regex
 set magic
 
-" Linebreak settings
+" Linebreak and textwidth settings
 set linebreak
 let &showbreak = '> '
 set textwidth=80 "gq at the beginning wraps automatically
-"set formatoptions+=a
+set colorcolumn=+1 " higlight column right after max textwidth
+
+" wp -> wrap paragraph (according to textwidth above)
 nnoremap wp gq}
 
 " Completion settings
