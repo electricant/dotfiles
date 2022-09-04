@@ -20,7 +20,7 @@ set shiftwidth=6
 set tabstop=6
 " Linebreak
 set linebreak
-let &showbreak = '↪'
+let &showbreak = '>'
 " keep at least 5 lines above/below
 set scrolloff=5
 " Some performance tweaks
