@@ -1,0 +1,7 @@
+[user]
+	name = electricant
+	email = electricant@anche.no
+[commit]
+	template = ~/.git_commitmsg
+[push]
+	default = simple
