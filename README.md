@@ -64,9 +64,9 @@ dotfiles.
 
 What follows is a description of the available branches:
 
- * main -> the current branch with, license, readme and gitignore
- * dotfiles-full -> dotfiles offering the full-fledged config with plugins and
+ * `main` -> the current branch with: license, readme and gitignore
+ * `dotfiles-full` -> dotfiles offering the full-fledged config with plugins and
 	various bells and whistles
- * dotfiles-lite -> more humble dotfiles, for simpler machines
- * dotfiles-win -> dotfiles for windows
+ * `dotfiles-lite` -> more humble dotfiles, for simpler machines
+ * `dotfiles-win` -> dotfiles for Windows
 
