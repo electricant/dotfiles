@@ -48,7 +48,8 @@ set magic
 set linebreak
 let &showbreak = '> '
 set textwidth=80 "gq at the beginning wraps automatically
-set colorcolumn=+1 " higlight column right after max textwidth
+set colorcolumn=+1,+41 " higlight column right after max textwidth
+highlight ColorColumn ctermbg=NONE guibg=NONE ctermfg=Red guifg=Red cterm=underline gui=underline
 
 " wp -> wrap paragraph (according to textwidth above)
 nnoremap wp gq}
