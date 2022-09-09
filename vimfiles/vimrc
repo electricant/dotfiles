@@ -22,6 +22,7 @@ if has("gui_running")
 	" Set sensible initial window size
 	set lines=40 columns=80
 	colorscheme desert
+	set number " show line numbers
 endif
 
 " Indent with tabs, align with spaces
@@ -45,11 +46,11 @@ set hlsearch " Hilight search results
 set magic
 
 " Linebreak and textwidth settings
-set linebreak
+"set linebreak
 let &showbreak = '> '
 set textwidth=80 "gq at the beginning wraps automatically
 set colorcolumn=+1,+41 " higlight column right after max textwidth
-highlight ColorColumn ctermbg=NONE guibg=NONE ctermfg=Red guifg=Red cterm=underline gui=underline
+highlight ColorColumn ctermbg=NONE guibg=NONE ctermfg=Red guifg=Red cterm=bold gui=bold
 
 " wp -> wrap paragraph (according to textwidth above)
 nnoremap wp gq}
