@@ -3,11 +3,10 @@
 set nocompatible
 set encoding=utf8
 set ttyfast
-filetype on
-filetype indent on
-filetype plugin on
 set autoread
 set modeline
+filetype on
+filetype plugin on
 
 " Keep cursor 8 lines from window borders when scrolling
 set scrolloff=6
@@ -25,10 +24,9 @@ if has("gui_running")
 	set number " show line numbers
 endif
 
-" Indent with tabs, align with spaces
-set noexpandtab
-set copyindent
-set preserveindent
+" Indenting options
+filetype indent on " load specific indentation settings for each file
+set noexpandtab " indent with tabs
 set softtabstop=0
 set shiftwidth=6
 set tabstop=6
