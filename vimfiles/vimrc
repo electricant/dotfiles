@@ -118,8 +118,9 @@ let g:syntastic_tex_checkers=['lacheck'] " ChkTeX is too strict and chatty
 
 " nerdtree plugin options
 packadd nerdtree
-" Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
+" Start NERDTree only if a file/directory is specified and move the cursor to its window.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() > 0 | NERDTree | wincmd p | endif
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
@@ -127,6 +128,9 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" vimwiki plugin options
+packadd vimwiki
 
 " UltiSnips settings (installed from Debian repositories)
 set runtimepath+=/usr/share/vim/vim-ultisnips " where's the plugin located?
