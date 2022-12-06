@@ -15,7 +15,7 @@ set scrolloff=6
 
 " Syntax and colors
 syntax on
-colors darkblue
+colors desert
 
 " Indentation and tab beahviour (indent using mixed tabs and spaces)
 " see: https://vim.fandom.com/wiki/Indenting_source_code
