@@ -50,9 +50,6 @@ set textwidth=80 "gq at the beginning wraps automatically
 set colorcolumn=+1,+41 " higlight column right after max textwidth
 highlight ColorColumn ctermbg=NONE guibg=NONE ctermfg=Red guifg=Red cterm=bold gui=bold
 
-" wp -> wrap paragraph (according to textwidth above)
-nnoremap wp gq}
-
 " Completion settings
 set complete=.,w,b,u,t,i,kspell
 
@@ -67,6 +64,9 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+" wp -> wrap paragraph (according to textwidth above)
+nnoremap wp gq}
+
 " put vim in paste mode using F2
 set pastetoggle=<F2>
 
@@ -74,8 +74,15 @@ set pastetoggle=<F2>
 map <F3>i :set spell! spelllang=it<CR>
 map <F3>e :set spell! spelllang=en<CR>
 map <F4> :set spell!<CR>
-map <F5> :SyntasticToggleMode<CR>
-map <F6> :w \| :make!<CR>
+
+" Quick save and compile
+map <F5> :w \| :make!<CR>
+
+" Insert current date at cursor
+nnoremap <F6> "=strftime("%F")<CR>gP " 2016-11-23
+inoremap <F6> <C-R>=strftime("%F")<CR>
+nnoremap <F6>u "=strftime("%d-%b-%Y")<CR>gP " 29-Aug-2016
+inoremap <F6>u <C-R>=strftime("%d-%b-%Y")<CR>
 
 " remap '.' as ':' when in normal mode and ',' to '.'
 nnoremap . :
@@ -103,13 +110,15 @@ nnoremap <CR> :noh<CR><CR>
 
 " syntastic plugin options
 packadd syntastic
+
+map <F12> :SyntasticToggleMode<CR>
+
 let g:syntastic_check_on_open=0
 let g:syntastic_check_on_wq=1
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_jump=2
 let g:syntastic_warning_symbol="W>"
 let g:syntastic_error_symbol="E>"
-
 let g:syntastic_c_compiler_options='-Wall -Wpedantic -Wextra'
 let g:syntastic_cpp_compiler_options='-Wall -Wpedantic -Wextra -std=c++11'
 let g:syntastic_d_compiler='gdc'
@@ -118,6 +127,7 @@ let g:syntastic_tex_checkers=['lacheck'] " ChkTeX is too strict and chatty
 
 " nerdtree plugin options
 packadd nerdtree
+
 " Start NERDTree only if a file/directory is specified and move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() > 0 | NERDTree | wincmd p | endif
