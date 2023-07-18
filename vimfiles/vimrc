@@ -1,14 +1,17 @@
-" vimrc from https://github.com/electricant/config_files/blob/master/vimrc
+" set packpath to correct value
+set packpath+=C:\Users\psca\vimfiles
+
 " general behaviour
 set nocompatible
 set encoding=utf8
 set ttyfast
 set autoread
 set modeline
+set number relativenumber
 filetype on
 filetype plugin on
 
-" Keep cursor 8 lines from window borders when scrolling
+" Keep cursor this lines away from window borders when scrolling
 set scrolloff=6
 
 " Syntax and colors
@@ -21,7 +24,6 @@ if has("gui_running")
 	" Set sensible initial window size
 	set lines=40 columns=80
 	colorscheme desert
-	set number " show line numbers
 endif
 
 " Indenting options
@@ -30,6 +32,8 @@ set noexpandtab " indent with tabs
 set softtabstop=0
 set shiftwidth=6
 set tabstop=6
+set autoindent
+filetype plugin indent on
 
 " more powerful backspacing
 set backspace=indent,eol,start
@@ -172,4 +176,3 @@ if has ('autocmd') " Remain compatible with earlier versions
     	au! BufWritePost $MYVIMRC so % | echom "Reloaded " . $MYVIMRC
   augroup END
 endif
-
