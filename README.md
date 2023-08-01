@@ -33,8 +33,8 @@ alias, like:
 
 ## Install your dotfiles onto a new system
 
-Prior to the installation make sure you have committed the alias to your
-`.bashrc` or `.zsh`:
+Prior to the installation make sure you have added this alias to your
+`.bashrc` or `.zsh` (or just copy-paste it from here before cloning the repo):
 
 	alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
@@ -47,8 +47,9 @@ Now clone your dotfiles into a bare repository in a "dot" folder of your
 
 Checkout the actual content from the bare repository to your $HOME:
 
-	config checkout
+	config checkout <branch_name>
 
+See below for the available branch names and their description.
 If the command above fails see the link above for troubleshooting instructions
 or simply delete the offending files and checkout again.
 
