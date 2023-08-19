@@ -5,3 +5,5 @@
 	template = ~/.git_commitmsg
 [push]
 	default = simple
+[core]
+	autocrlf = input
