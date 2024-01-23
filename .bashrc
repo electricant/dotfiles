@@ -100,6 +100,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Add local bin files to path
+export PATH=$PATH:/home/pol/.local/bin
+
 # Alias and additional commands definitions.
 alias fuck='sudo $(history -p \!\!)'
 alias sudo='sudo ' # see http://unix.stackexchange.com/questions/235366/load-aliases-from-bashrc-file-while-using-sudo#235369
