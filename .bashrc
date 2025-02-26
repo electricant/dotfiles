@@ -81,6 +81,7 @@ nas-mount()
 	sudo mkdir -p $NAS_MOUNTPOINT
 	sudo chmod a+rwx $NAS_MOUNTPOINT
 	sshfs -C -o uid=1000,gid=1000,reconnect \
+		-o PreferredAuthentications=password -o PubkeyAuthentication=no \
 		pol@$NAS_HOSTNAME:/mnt/data $NAS_MOUNTPOINT
 }
 
