@@ -108,4 +108,4 @@ export PATH=$PATH:/home/pol/.local/bin
 alias fuck='sudo $(history -p \!\!)'
 alias sudo='sudo ' # see http://unix.stackexchange.com/questions/235366/load-aliases-from-bashrc-file-while-using-sudo#235369
 alias stopwatch='echo Press enter to stop; time read'
-alias config='/usr/bin/git --git-dir="$HOME"/.dotfiles/ --work-tree="$HOME"'
+alias config='git --git-dir="$HOME"/.dotfiles/ --work-tree="$HOME"'
