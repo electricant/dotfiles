@@ -106,7 +106,7 @@ if has("gui_running")
 	" increase font size
 	set guifont=Monospace\ 12
 	" Set sensible initial window size
-	set lines=50 columns=80
+	set lines=49 columns=80
 endif
 
 " Reload .vimrc automagically if something is changed
