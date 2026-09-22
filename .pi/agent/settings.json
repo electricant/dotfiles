@@ -1,0 +1,33 @@
+{
+  "lastChangelogVersion": "0.86.1",
+  "theme": "dark",
+  "defaultProvider": "ollama-cloud",
+  "defaultModel": "nemotron-3-super",
+  "defaultThinkingLevel": "low",
+  "sendSessionAffinityHeaders": true,
+  "retry": {
+    "enabled": true,
+    "maxRetries": 15,
+    "baseDelayMs": 5000,
+    "maxAgentDelayMs": 60000,
+    "provider": {
+      "timeoutMs": 60000,
+      "maxRetries": 0
+    }
+  },
+  "packages": [
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:pi-docparser",
+    "npm:@narumitw/pi-caffeinate",
+    "npm:@samfp/pi-memory",
+    "npm:pi-smart-fetch",
+    "npm:pi-smart-web-search",
+    "npm:pi-background-tasks",
+    "npm:pi-goal-x",
+    "npm:pi-extension-nvidia-nim",
+    "npm:pi-ollama-cloud",
+    "npm:pi-blackhole",
+    "npm:pi-invisible-continue"
+  ]
+}
