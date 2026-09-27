@@ -2,7 +2,7 @@
 	ui = auto
 [user]
 	name = Electric Ant
-	email = electricant@anche.no
+	email = electricant@users.noreply.github.com
 [merge]
 	ff = true
 	conflictStyle = zdiff3

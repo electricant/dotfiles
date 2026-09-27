@@ -72,6 +72,10 @@ export HISTCONTROL=ignoreboth:erasedups
 # Set vim mode
 set -o vi
 
+# One-liner to launch a command inside an empty temporary directory
+# Usage: intmp <command>, intmp git clone https://...
+intmp() ( cd "$(mktemp -d)" && "$@" )
+
 # Useful command to mount my NAS using SSHFS
 NAS_HOSTNAME="nas.scaramuzza.me"
 NAS_MOUNTPOINT="/media/pol/$NAS_HOSTNAME"

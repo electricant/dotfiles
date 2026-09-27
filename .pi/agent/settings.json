@@ -1,9 +1,9 @@
 {
-  "lastChangelogVersion": "0.86.1",
+  "lastChangelogVersion": "0.87.1",
   "theme": "dark",
   "defaultProvider": "ollama-cloud",
   "defaultModel": "nemotron-3-super",
-  "defaultThinkingLevel": "low",
+  "defaultThinkingLevel": "medium",
   "sendSessionAffinityHeaders": true,
   "retry": {
     "enabled": true,
